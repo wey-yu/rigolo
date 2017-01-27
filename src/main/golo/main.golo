@@ -11,8 +11,9 @@ augment spark.Response {
 }
 
 function main = |args| {
-  let port = System.getenv(): get("PORT") orIfNull 9090
-
+  #let port = System.getenv(): get("PORT") orIfNull 9090
+  let port = 8080
+  
   Spark.setPort(port)
 
   get("/", |request, response| -> trying({
