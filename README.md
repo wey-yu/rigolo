@@ -53,6 +53,7 @@ golo new rigolo --type maven
 
 - add a `clevercloud` directory
 - inside `clevercloud` directory, add a `jar.json` file:
+
   ```json
   {
     "build": {
