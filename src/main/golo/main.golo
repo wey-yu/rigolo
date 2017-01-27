@@ -13,7 +13,7 @@ augment spark.Response {
 function main = |args| {
   let port = System.getenv(): get("PORT") orIfNull 9090
 
-  spark.setPort(port)
+  Spark.setPort(port)
 
   get("/", |request, response| -> trying({
     return DynamicObject(): message("🐼 ❤️ Golo")
