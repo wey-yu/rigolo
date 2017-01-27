@@ -4,6 +4,6 @@
     "goal": "package"
   },
   "deploy": {
-    "goal": "exec:java"
+    "jarName": "target/rigolo-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
   }
 }
