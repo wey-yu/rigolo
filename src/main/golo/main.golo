@@ -31,6 +31,6 @@ function main = |args| {
     |error| -> response: jsonPayLoad(DynamicObject(): message(error: message()))
   ))
 
-  println("🌍 listening on " + port)
+  println("🌍 listening on " + port + "...")
 
 }
