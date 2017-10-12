@@ -15,8 +15,7 @@ golo new rigolo --type maven
 - I will use [SparkJava](http://sparkjava.com/)
   - `slf4j-simple`
   - `spark-core`
-- Golo needs `json-simple` (you won't need to declare it with the next milestone of Golo)
-  - currently, I'm using version `3.2.0-M5` of Golo
+- Currently, I'm using version `3.2.0-M6` of Golo
 
 ```xml
 <dependency>
@@ -45,7 +44,7 @@ golo new rigolo --type maven
 ```xml
 <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <golo.version>3.2.0-M5</golo.version>
+  <golo.version>3.2.0-M6</golo.version>
 </properties>
 ```
 
@@ -79,5 +78,4 @@ That's all
 
 See it in action:
 
-- http://rigolo.cleverapps.io/hello
 - http://rigolo.cleverapps.io
