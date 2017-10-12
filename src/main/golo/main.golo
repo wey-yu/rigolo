@@ -4,8 +4,8 @@ import gololang.Errors
 import spark.Spark
 
 augment spark.Response {
-  function jsonPayLoad = |this, content| {
-    this: type("application/json")
+  function json = |this, content| {
+    this: type("application/json;charset=UTF-8")
     return gololang.JSON.stringify(content)
   }
 }
@@ -19,16 +19,8 @@ function main = |args| {
     return DynamicObject(): message("🐼 ❤️ Golo")
   })
   : either(
-    |content| -> response: jsonPayLoad(content),
-    |error| -> response: jsonPayLoad(DynamicObject(): message(error: message()))
-  ))
-
-  get("/hello", |request, response| -> trying({
-    return DynamicObject(): message("Hello 🌍!")
-  })
-  : either(
-    |content| -> response: jsonPayLoad(content),
-    |error| -> response: jsonPayLoad(DynamicObject(): message(error: message()))
+    |content| -> response: json(content),
+    |error| -> response: json(DynamicObject(): message(error: message()))
   ))
 
   println("🌍 listening on " + port + "...")
